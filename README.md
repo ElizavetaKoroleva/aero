@@ -1,1 +1,3 @@
-# gulp
+# Gulp
+## Folder structure
+##
