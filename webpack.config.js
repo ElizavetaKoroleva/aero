@@ -11,9 +11,9 @@ const config = {
 	devtool: isProduction ? false : "source-map",
 	module: {
 		rules: [{
-				test: /\.js$/,
+				test: /\.js$/,//files to transform
 				exclude: /(node_modules)/,
-				use: {
+				use: {//what to use for transformation
 					loader: "babel-loader",
 					options: {
 						presets: ["@babel/preset-env"]

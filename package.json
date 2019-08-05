@@ -28,6 +28,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "loader": "^2.1.1",
+    "webpack": "^4.39.1",
     "webpack-stream": "^5.2.1"
   }
 }

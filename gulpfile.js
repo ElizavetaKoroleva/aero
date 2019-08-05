@@ -49,7 +49,7 @@ gulp.task("templates", () => {
 
 gulp.task("styles", () => {
     return gulp
-        .src(`${PATHS.app}/common/styles/**/*.scss`, {
+        .src(`${PATHS.app}/common/styles/app.scss`, {
             since: gulp.lastRun("styles")
         })
         .pipe(plumber())
@@ -81,7 +81,7 @@ gulp.task("images", () => {
 
 gulp.task('copy', () => {
     return gulp
-        .src(`${PATHS.app}/common/fonts/**/*.+(ttf|woff|eof|svg)`,
+        .src(`${PATHS.app}/common/fonts/**/*`,
         { since: gulp.lastRun("copy") })
         .pipe(plumber())
         .pipe(gulp.dest(`${PATHS.dist}/assets/fonts`));
@@ -116,6 +116,6 @@ gulp.task(
     "production",
     gulp.series(
         "clear",
-        gulp.parallel("templates", "styles", "scripts", "images", "copy")
+        gulp.parallel("templates", "styles", "scripts", "images")
     )
 );
