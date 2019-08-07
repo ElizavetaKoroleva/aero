@@ -95,13 +95,13 @@ gulp.task("server", () => {
 });
 
 gulp.task("watch", () => {
-    gulp.watch(`${PATHS.app}/**/*.pug`, gulp.series("templates"));
-    gulp.watch(`${PATHS.app}/**/*.scss`, gulp.series("styles"));
-    gulp.watch(`${PATHS.app}/**/*.js`, gulp.series("scripts"));
-    gulp.watch(
-        `${PATHS.app}/common/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
-        gulp.series("images")
-    );
+	gulp.watch(`${PATHS.app}/**/*.pug`, gulp.series("templates"));
+	gulp.watch(`${PATHS.app}/**/*.scss`, gulp.series("styles"));
+	gulp.watch(`${PATHS.app}/**/*.js`, gulp.series("scripts"));
+	gulp.watch(
+		`${PATHS.app}/common/images/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
+		gulp.series("images")
+	);
 });
 
 gulp.task(
