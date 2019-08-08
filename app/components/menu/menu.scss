@@ -16,10 +16,14 @@
         font-weight: bold;
         text-align: center;
         &:hover {
-            .menu__submenu {
-                display: flex;
-            }
-        }
+			.menu__link {
+				color: color("blue");
+			}
+
+			.menu__submenu {
+				display: flex;
+			}
+		}
     }
     &__link {
         text-decoration: none;
