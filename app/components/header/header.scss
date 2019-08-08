@@ -1,16 +1,16 @@
 .header {
     padding: 50px 0;
-    border-bottom: 1px solid color('grey-light');
+    border-bottom: 1px solid color('gray-light');
 
     &__content {
         display: flex;
         align-items: center;
-        justify-content: space-between;  
+        justify-content: space-between;
     }
 
     &__btns {
         display: flex;
-
+        
         .icon-btn {
             margin-right: 40px;
 

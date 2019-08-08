@@ -11,16 +11,14 @@
         margin-right: 8px;
     }
 
-    &__count{
+    &__count {
         width: 24px;
         height: 24px;
         text-align: center;
         line-height: 24px;
-        background-color: color('grey-lighter');
+        background-color: color('gray-lighter');
         border-radius: 50%;
-        font-weight: bold;
         font-size: 12px;
+        font-weight: bold;
     }
-
-
 }
