@@ -1,7 +1,6 @@
 include ../logo/logo
 include ../search/search
 include ../icon-btn/icon-btn
-include ../munu/menu
 
 mixin header()
     header.header
@@ -10,5 +9,6 @@ mixin header()
                 +logo('assets/images/logo.svg')
                 +search()
                 header.header__btns
-                    +icon-btn('assets/images/favourites.svg', 10)(src='favourites')
-                    +icon-btn('assets/images/cart.svg', 2)(src='cart')
+                    +icon-btn('assets/images/favourites.svg', 10)
+                    +icon-btn('assets/images/cart.svg', 2)
+    
