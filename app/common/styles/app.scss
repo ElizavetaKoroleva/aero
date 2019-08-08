@@ -1,16 +1,28 @@
-// Variables
-@import 'variables/colors';
-@import 'variables/measures';
-@import 'variables/typography';
+// Libraries
+// @import "../../../node_modules/**/*.css";
 
-// // Core styles
-@import 'core/fonts';
-@import 'core/base';
-@import 'core/typography';
+// Variables
+@import "variables/colors";
+@import "variables/measures";
+@import "variables/typography";
+@import "variables/grid";
+
+//helpers
+@import "helpers/sprites";
+@import "helpers/bootstrap";
+
+// Core styles
+@import "core/fonts";
+@import "core/base";
+@import "core/typography";
+
+// Pages
 
 // Components
-@import '../../components/header/header';
-@import '../../components/footer/footer';
-@import '../../components/logo/logo';
-@import '../../components/search/search';
-@import '../../components/icon-btn/icon-btn';
+@import "../../components/header/header";
+@import "../../components/footer/footer";
+@import "../../components/logo/logo";
+@import "../../components/search/search";
+@import "../../components/search-text/search-text";
+@import "../../components/icon-btn/icon-btn";
+@import "../../components/menu/menu";

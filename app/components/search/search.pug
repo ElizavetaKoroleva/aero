@@ -1,4 +1,6 @@
+include ../search-text/search-text
+
 mixin search()
-    form(action="")
-        input(type="text" value="" placeholder="Поиск")
+    form(action='' class='search')
+        +search-text()
         

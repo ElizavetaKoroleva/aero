@@ -1,3 +1,4 @@
+include ../../common/templates/mixins/mixins
 include ../../components/header/header
 include ../../components/footer/footer
 
@@ -5,8 +6,10 @@ doctype html
 html(lang='ru')
     include parts/head
     body
+        //- include ../icons/sprite.svg
         main.main
             +header()
             block content
             +footer()
-            script(src='assets/scripts/app.min.js')
+        script(src='assets/scripts/app.min.js')
+            
