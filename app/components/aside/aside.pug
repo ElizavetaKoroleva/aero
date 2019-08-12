@@ -1,0 +1,17 @@
+include ../button/button
+include ../checkbox/checkbox
+
+mixin aside()
+    aside.aside
+        -
+            var checkbox = [
+                {title: 'Вельвет'},
+                {title: 'Микровелюр'},
+                {title: 'Велюр'},
+                {title: 'Жаккард'},
+                {title: 'Замша'},
+                {title: 'Рогожа'}
+            ]
+        +checkbox(checkbox)
+        +button()
+    

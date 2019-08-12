@@ -1,0 +1,8 @@
+mixin checkbox(arr)
+    checkbox.checkbox
+        if arr
+            each item in arr
+                label.checkbox__label(for="checkbox")= item.title
+                    input(id="checkbox" type="checkbox")
+                        
+                

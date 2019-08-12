@@ -1,6 +1,28 @@
-//- Используем стандартный шаблон
 extends ../layouts/default/default
 
-//- Выводим контент
+include ../components/breadcrumbs/breadcrumbs
+include ../components/page-title/page-title
+include ../components/grid/grid
+include ../components/aside/aside
+
 block content
-    | Index content
+    .container
+        .mt-xl-12.mb-xl-3
+            -
+                var breadcrumbs = [
+                    {url: '#', title: 'Главная', value: 'Главная'},
+                    {url: '#', title: 'Каталог', value: 'Каталог'},
+                    {url: '#', title: 'Мягкая мебель', value: 'Мягкая мебель'},
+                    {value: 'Диваны'}
+                ]
+            +breadcrumbs(breadcrumbs)
+        +page-title('Диваны')
+        .mt-xl-24
+                .row
+                    .col-xl-5
+                        +aside()
+                    .col-xl-18.offset-xl-3
+                        +grid()
+                        
+                    
+                        

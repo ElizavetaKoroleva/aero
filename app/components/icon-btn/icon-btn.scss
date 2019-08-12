@@ -9,6 +9,10 @@
 
     &__icon {
         margin-right: 8px;
+
+        > .icon {
+            display: block;
+        }
     }
 
     &__count {

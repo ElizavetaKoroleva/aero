@@ -1,81 +1,12 @@
-mixin menu()
+mixin menu(arr)
     nav.menu
         ul.menu__list
-            li.menu__item
-                a(class="menu__link" href="#") Мебель
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Мягкая мебель
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Столы
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Стулья
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Стеллажы
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Шкафы-купе
-            li.menu__item
-                a(class="menu__link" href="#") Хранение
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-            li.menu__item
-                a(class="menu__link" href="#") Спальня
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-            li.menu__item
-                a(class="menu__link" href="#") Кухня
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-            li.menu__item
-                a(class="menu__link" href="#") Аксессуары
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-            li.menu__item
-                a(class="menu__link" href="#") Акции
-                ul.menu__submenu
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
-                    li.menu__submenu-item
-                        a(class="menu__submenu-link" href="#") Пункт
+            if arr
+                each item in arr
+                    li.menu__item
+                        a.menu__link.link(href=item.url)= item.title
+                        if item.submenu
+                            ul.menu__submenu-list
+                                each subItem in item.submenu
+                                    li.menu__submenu-item
+                                        a.menu__submenu-link.link(href=subItem.url)= subItem.title

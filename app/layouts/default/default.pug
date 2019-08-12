@@ -6,10 +6,9 @@ doctype html
 html(lang='ru')
     include parts/head
     body
-        //- include ../icons/sprite.svg
+        +header()
         main.main
-            +header()
             block content
-            +footer()
+        +footer()
         script(src='assets/scripts/app.min.js')
             

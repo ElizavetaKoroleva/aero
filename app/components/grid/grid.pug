@@ -1,0 +1,14 @@
+include ../product-card/product-card
+
+mixin grid()
+    grid.grid
+        -
+            var products = [
+                {url: '#', img: 'assets/images/item-04.jpg', title: 'Montreal', price: '10 990 руб.'},
+                {url: '#', img: 'assets/images/item-06.jpg', title: 'Glasgow', price: '19 990 руб.'},
+                {url: '#', img: 'assets/images/item-01.jpg', title: 'Munich', price: '24 990 руб.'},
+                {url: '#', img: 'assets/images/item-05.jpg', title: 'Alexandria', price: '109 990 руб.'},
+                {url: '#', img: 'assets/images/item-02.jpg', title: 'Karachi', price: '17 990 руб.'},
+                {url: '#', img: 'assets/images/item-03.jpg', title: 'Phoenix', price: '29 990 руб.'}
+            ]
+        +product-card(products, buttons)

@@ -1,0 +1,32 @@
+.product-card {
+    width: 310px;
+    height: 386px;
+    padding: 20px;
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &__container {
+        padding: 0;
+        margin: 0;
+
+        .product-card__link {
+            padding: 0;
+            margin: 0;
+        }
+    
+        .product-card__line {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            .product-card__price {
+                font-weight: bold;
+                margin: 20px 0px 20px 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.product-btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &__icon {
+        margin: 0;
+        padding: 0;
+        margin-left: 23px;
+
+        > .icon {
+            display: block;
+        }
+    }
+}

@@ -6,6 +6,7 @@
 @import "variables/measures";
 @import "variables/typography";
 @import "variables/grid";
+@import "variables/animation";
 
 //helpers
 @import "helpers/sprites";
@@ -19,10 +20,19 @@
 // Pages
 
 // Components
+@import "../../components/link/link";
 @import "../../components/header/header";
 @import "../../components/footer/footer";
 @import "../../components/logo/logo";
 @import "../../components/search/search";
-@import "../../components/search-text/search-text";
 @import "../../components/icon-btn/icon-btn";
+@import "../../components/search-text/search-text";
 @import "../../components/menu/menu";
+@import "../../components/breadcrumbs/breadcrumbs";
+@import "../../components/page-title/page-title";
+@import "../../components/product-card/product-card";
+@import "../../components/grid/grid";
+@import "../../components/product-btn/product-btn";
+@import "../../components/aside/aside";
+@import "../../components/button/button";
+@import "../../components/checkbox/checkbox";
