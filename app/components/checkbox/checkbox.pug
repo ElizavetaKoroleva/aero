@@ -1,8 +1,14 @@
-mixin checkbox(arr)
+include ../checkmark/checkmark
+
+mixin checkbox(arr, item)
     checkbox.checkbox
         if arr
             each item in arr
-                label.checkbox__label(for="checkbox")= item.title
-                    input(id="checkbox" type="checkbox")
+                .checkbox__form
+                    input.checkbox__box(id=item.id type="checkbox")
+                    //span.checkbox__checked
+                        +checkmark('check')
+                    label.checkbox__label(for=item.id)= item.title
+                    
                         
                 
