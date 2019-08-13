@@ -25,9 +25,11 @@
 
         &:checked {
             background-color: color('blue');
+            border: solid 1px color('blue');
 
             &:hover {
                 background-color: color('blue-darker');
+                border: solid 1px color('blue-darker');
             }
         }
 
@@ -36,7 +38,7 @@
         }
 
 
-        &__checked {
+        &__checkmark {
             position: absolute;
             left: 0;
             width: 10px;

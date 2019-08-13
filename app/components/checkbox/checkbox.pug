@@ -6,7 +6,7 @@ mixin checkbox(arr, item)
             each item in arr
                 .checkbox__form
                     input.checkbox__box(id=item.id type="checkbox")
-                    //span.checkbox__checked
+                    //.checkbox__checkmark
                         +checkmark('cart')
                     label.checkbox__label(for=item.id)= item.title
                     
