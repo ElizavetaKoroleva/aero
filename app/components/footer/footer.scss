@@ -1,0 +1,18 @@
+.footer {
+    background-color: color('gray-lighter');
+    margin: 100px 0 0 0;
+
+    &__top {
+        padding: 40px 0 2px 0;
+    }
+
+    &__middle {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__bottom {
+        padding: 2px 0 40px 0;
+        margin: 0;
+    }
+}

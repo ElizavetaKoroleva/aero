@@ -1,16 +1,49 @@
 .button {
-    width: 255px;
-    height: 50px;
-    background-color: color('blue');
-    color: color('white');
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    font-weight: bold;
-    border: none;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    line-height: 50px;
+    background-color: transparent;
     border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: $font-family-base;
     cursor: pointer;
+    text-align: center;
+    transition: background-color $animation-time;
+    
+    &_primary {
+        height: 50px;
+        color: color("white");
+        background-color: color("blue");
+        font-weight: bold;
+        padding: 0 85px;
 
-    &:hover {
-        background-color: color('blue-darker');
+        &:hover {
+            background-color: color("blue-dark");
+        }
+    }
+
+    &_clear {
+        height: 50px;
+        color: color("gray-darkest");
+        padding: 0 70px;
+        margin-top: 5px;
+    }
+
+    &_menu {
+        height: 30px;
+        background-color: color("white");
+        color: color("gray-darkest");
+        padding: 0 15px;
+        border-radius: 2px;
+        line-height: 0;
+        &:hover {
+            color: color("blue");
+        }
+    }
+
+    &_block {
+        width: 100%;
     }
 }

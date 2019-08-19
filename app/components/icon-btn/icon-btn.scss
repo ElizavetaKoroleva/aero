@@ -7,8 +7,17 @@
     background-color: transparent;
     cursor: pointer;
 
+    &:hover {
+        .icon-btn__icon {
+            > .icon {
+                fill: color('blue-darker');
+            }
+        }
+    }
+
     &__icon {
         margin-right: 8px;
+        fill: color('blue');
 
         > .icon {
             display: block;

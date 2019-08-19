@@ -1,3 +1,28 @@
+include ../button/button
+include ../page-information/page-information
+
 mixin footer()
-    .container
-        footer.footer Footer contenthhhhhhhhh
+    footer.footer
+        .footer__top
+            .container
+                .row
+                    .col-xl-13
+                        input.button.button_menu(type="button" value='Каталог')
+                        input.button.button_menu(type="button" value='Оплата')
+                        input.button.button_menu(type="button" value='Доставка')
+                        input.button.button_menu(type="button" value='Возврат')
+                        input.button.button_menu(type="button" value='Сборка')
+                        input.button.button_menu(type="button" value='Помощь')
+                        input.button.button_menu(type="button" value='Обратная связь')
+                    .col-xl-6.offset-xl-5
+                        div.page-information.page-information__contact= "По любым вопросам обращайтесь:"
+        .footer__middle
+            .container
+                .row
+                    .col-xl-6.offset-xl-18
+                        div.page-information.page-information__phone= "+7 499 242-12-54"
+        .footer__bottom
+            .container
+                .row
+                    .col-xl-4
+                        div.page-information.page-information__info= "© 2019, Интернет-магазин мебели"

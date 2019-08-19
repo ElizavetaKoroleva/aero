@@ -1,0 +1,27 @@
+.page-information {
+
+    &__contact {
+        width: 100%;
+        color: color("gray-darker");
+        font-size: 12px;
+        text-align: right;
+    }
+
+    &__phone {
+        width: 100%;
+        color: color("gray-darker");
+        font-size: 20px;
+        text-align: right;
+    }
+
+    &__info {
+        width: 100%;
+        color: color("gray");
+        font-size: 12px;
+        text-align: left;
+    }
+
+    &__filter {
+        font-weight: bold;
+    }
+}

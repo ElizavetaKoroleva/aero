@@ -6,6 +6,37 @@
     background-color: transparent;
     cursor: pointer;
 
+    &:first-child {
+        width: 20px;
+        height: 20px;
+        fill: color('white');
+        stroke: color('blue');
+        stroke-width: 2;
+        &:focus {
+            fill: color('blue');
+        }
+    }
+
+    &:last-child {
+        fill: color('blue'); 
+        &:hover {
+            .product-btn__icon {
+                > .icon {
+                    fill: color('blue-darker');
+                }
+            }
+        }
+    }
+
+
+    &__icon {
+        margin-right: 8px;
+
+        > .icon {
+            display: block;
+        }
+    }
+
     &__icon {
         margin: 0;
         padding: 0;

@@ -1,17 +1,52 @@
 include ../button/button
 include ../checkbox/checkbox
+include ../slide-btn/slide-btn
+include ../page-information/page-information
+include ../page-information/page-information
+include ../color-checkbox/color-checkbox
 
 mixin aside()
-    aside.aside
-        -
-            var checkbox = [
-                {id: 'chbox1', title: 'Вельвет'},
-                {id: 'chbox2', title: 'Микровелюр'},
-                {id: 'chbox3', title: 'Велюр'},
-                {id: 'chbox4', title: 'Жаккард'},
-                {id: 'chbox5', title: 'Замша'},
-                {id: 'chbox6', title: 'Рогожа'}
-            ]
-        +checkbox(checkbox)
-        +button('Применить')
+    form(action="" class="filter")
+        .filter__color
+            .filter__title
+                div.page-information.page-information__filter= "Цвет"
+                +slide-btn('arrow')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+            +color-checkbox('HHH')
+        .filter__material
+            -
+                var materials = [
+                    {name: 'test', label: 'Вельвет'},
+                    {name: 'test', label: 'Микровелюр'},
+                    {name: 'test', label: 'Велюр'},
+                    {name: 'test', label: 'Жаккард'},
+                    {name: 'test', label: 'Замша'},
+                    {name: 'test', label: 'Рогожка'}
+                ]
+            .filter__title
+                div.page-information.page-information__filter= "Материал"
+                +slide-btn('arrow')
+            each item in materials
+                +checkbox(item.name, item.label)
+        .filter__style
+            -
+                var angles = [
+                    {name: 'test', label: 'Левый'},
+                    {name: 'test', label: 'Правый'},
+                    {name: 'test', label: 'Универсальный'}
+                ]
+            .filter__title
+                div.page-information.page-information__filter= "Угол"
+                +slide-btn('arrow')
+            each item in angles
+                +checkbox(item.name, item.label)
+        input.button.button_primary(type="submit" value='Применить')
+        input.button.button_clear(type="reset" value='Очистить фильтр')
     

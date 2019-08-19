@@ -20,6 +20,17 @@
 
     &__btns {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+
+        .icon-btn {
+            &:hover {
+                .icon-favourites {
+                    animation-name: heart;
+                    animation-duration: .7s;
+                    // animation-timing-function: ease-out;
+                    // animation-iteration-count: 2;
+                }                
+            }
+        }
     }
 }
