@@ -1,6 +1,12 @@
 .product-btn {
     margin: 0;
     margin-left: 20px;
+
+    @include media-breakpoint-down(xs) {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
     padding: 0;
     border: 0;
     background-color: transparent;

@@ -7,7 +7,7 @@ include ../components/aside/aside
 
 block content
     .container
-        .mt-xl-12.mb-xl-3
+        .mt-md-12.mb-md-3
             -
                 var breadcrumbs = [
                     {url: '#', title: 'Главная', value: 'Главная'},
@@ -17,12 +17,59 @@ block content
                 ]
             +breadcrumbs(breadcrumbs)
         +page-title('Диваны')
+        .col-xs-24.d-xs-block.d-md-none
+            input.button.button_filter(type="submit" value='Фильтр')
         .mt-xl-12
             .row
-                .col-xl-5.pt-xl-4
+                .col-xl-5.pt-xl-4.col-md-8.d-xs-none.d-md-block
                     +aside()
-                .col-xl-18.offset-xl-1
-                    +grid()
+                .col-xl-18.offset-xl-1.col-md-16.col-xs-24
+                    -
+                        var products = [
+                            {
+                                href: '#',
+                                name: 'Montreal',
+                                imgUrl: 'assets/images/item-01.jpg',
+                                price: '10&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Glasgow',
+                                imgUrl: 'assets/images/item-02.jpg',
+                                price: '19&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Munich',
+                                imgUrl: 'assets/images/item-03.jpg',
+                                price: '24&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Alexandria',
+                                imgUrl: 'assets/images/item-04.jpg',
+                                price: '109&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Karachi',
+                                imgUrl: 'assets/images/item-05.jpg',
+                                price: '17&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Phoenix',
+                                imgUrl: 'assets/images/item-06.jpg',
+                                price: '29&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            }
+                        ]
+                    +grid(products)
                         
                     
                         

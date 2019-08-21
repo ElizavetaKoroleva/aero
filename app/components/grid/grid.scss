@@ -1,7 +1,6 @@
 .grid {
-    display: grid;
-    grid-template-columns: 310px 310px 310px;
-    grid-template-rows: 386px 386px;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    .product-card {
+        margin-bottom: 20px;
+    }
+
 }

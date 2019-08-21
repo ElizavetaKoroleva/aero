@@ -6,6 +6,10 @@
 
     &__top {
         padding: 50px 0;
+
+        @include media-breakpoint-down(xs) {
+            padding: 28px 0;
+        }
     }
 
     &__bottom {
@@ -20,16 +24,17 @@
 
     &__btns {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
 
         .icon-btn {
-            &:hover {
-                .icon-favourites {
-                    animation-name: heart;
-                    animation-duration: .7s;
-                    // animation-timing-function: ease-out;
-                    // animation-iteration-count: 2;
-                }                
+            margin-right: 40px;
+
+            @include media-breakpoint-down(xs) {
+                margin-right: 20px;
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }

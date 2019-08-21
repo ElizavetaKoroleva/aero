@@ -34,3 +34,11 @@ ol {
     margin: 0;
     padding: 0;
 }
+
+.container {
+    padding: 0 34px;
+
+    @include media-breakpoint-down(xs) {
+        padding: 0 20px;
+    }
+}

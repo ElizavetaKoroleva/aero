@@ -11,15 +11,20 @@ mixin aside()
             .filter__title
                 div.page-information.page-information__filter= "Цвет"
                 +slide-btn('arrow')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
-            +color-checkbox('HHH')
+            -
+                var colors = [
+                    { name: 'filter-color', color: '#ffffff' },
+                    { name: 'filter-color', color: '#000000' },
+                    { name: 'filter-color', color: '#5a5a5a' },
+                    { name: 'filter-color', color: '#704d35' },
+                    { name: 'filter-color', color: '#e0791d' },
+                    { name: 'filter-color', color: '#ba0606' },
+                    { name: 'filter-color', color: '#38a01a' },
+                    { name: 'filter-color', color: '#314976' },
+                    { name: 'filter-color', color: '#3748a6' }
+                ]
+            each color in colors
+                +color-checkbox(color.name, color.color)
         .filter__material
             -
                 var materials = [

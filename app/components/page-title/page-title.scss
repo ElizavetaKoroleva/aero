@@ -1,3 +1,10 @@
 .page-title {
     text-align: center;
+
+    @include media-breakpoint-down(xs) {
+        h1 {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+    }
 }

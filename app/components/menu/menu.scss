@@ -12,7 +12,10 @@
     &__item {
         text-align: center;
         padding-bottom: 15px;
-		margin-right: 70px;
+        margin-right: 70px;
+        @include media-breakpoint-down(md) {
+            margin-right: 50px;
+        }
         &:hover {
 			.menu__link {
 				color: color("blue");

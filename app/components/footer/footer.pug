@@ -1,26 +1,53 @@
 include ../button/button
 include ../page-information/page-information
+include ../footer-menu/footer-menu
 
 mixin footer()
     footer.footer
-        .footer__top
-            .container
-                .row
-                    .col-xl-13
-                        input.button.button_menu(type="button" value='Каталог')
-                        input.button.button_menu(type="button" value='Оплата')
-                        input.button.button_menu(type="button" value='Доставка')
-                        input.button.button_menu(type="button" value='Возврат')
-                        input.button.button_menu(type="button" value='Сборка')
-                        input.button.button_menu(type="button" value='Помощь')
-                        input.button.button_menu(type="button" value='Обратная связь')
-                    .col-xl-6.offset-xl-5
-                        div.page-information.page-information__contact= "По любым вопросам обращайтесь:"
-        .footer__middle
-            .container
-                .row
-                    .col-xl-6.offset-xl-18
-                        div.page-information.page-information__phone= "+7 499 242-12-54"
+        .container
+            .row
+                .col-xs-24.d-xs-block.d-md-none
+                    .footer__middle
+                        .footer__middle-text По любым вопросам обращайтесь:
+                        a.footer__middle-link(href='tel:+74992421254' title='+7 499 242-12-54') +7 499 242-12-54
+            .row
+                .col-md-13.col-xs-20
+                    -
+                        var arr = [
+                            {
+                                title: 'Каталог',
+                                url: '#'
+                            },
+                            {
+                                title: 'Оплата',
+                                url: '#'
+                            },
+                            {
+                                title: 'Доставка',
+                                url: '#'
+                            },
+                            {
+                                title: 'Возврат',
+                                url: '#'
+                            },
+                            {
+                                title: 'Сборка',
+                                url: '#'
+                            },
+                            {
+                                title: 'Помощь',
+                                url: '#'
+                            },
+                            {
+                                title: 'Обратная связь',
+                                url: '#'
+                            }
+                        ]
+                    +footer-menu(arr)
+                .col-lg-5.offset-lg-6.col-md-8.offset-md-3.d-xs-none.d-md-block
+                    .footer__middle
+                        .footer__middle-text По любым вопросам обращайтесь:
+                        a.footer__middle-link(href='tel:+74992421254' title='+7 499 242-12-54') +7 499 242-12-54
         .footer__bottom
             .container
                 .row

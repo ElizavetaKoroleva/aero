@@ -1,16 +1,14 @@
 include ../product-btn/product-btn
 
-mixin product-card(arr)
-    if arr
-        each product in arr
-            .product-card
-                .product-card__container
-                    a.product-card__img(href=product.url)
-                        img(src=product.img alt='Товар')
-                    a.product-card__link.link(href=product.url)= product.title
-                    .product-card__line
-                        .product-card__price= product.price
-                        .product-card__buttons
-                            +product-btn('favourites')
-                            +product-btn('cart')
+mixin product-card(attrs)
+    .product-card
+        a.product-card__link(href=attrs.href title=attrs.name)
+            img.product-card__img(src=attrs.imgUrl, alt="")
+            span.product-card__name= attrs.name
+        .product-card__wrap
+            .product-card__price!= attrs.price
+                | &nbsp;руб.
+            .product-card__btns
+                each btn in attrs.btns
+                    +product-btn(btn)
 

@@ -2,6 +2,7 @@
     display: inline-block;
     margin: 0;
     border: 0;
+    height: 50px;
     line-height: 50px;
     background-color: transparent;
     border-radius: 4px;
@@ -10,14 +11,11 @@
     font-family: $font-family-base;
     cursor: pointer;
     text-align: center;
-    transition: background-color $animation-time;
     
     &_primary {
-        height: 50px;
         color: color("white");
         background-color: color("blue");
         font-weight: bold;
-        padding: 0 85px;
 
         &:hover {
             background-color: color("blue-dark");
@@ -25,22 +23,20 @@
     }
 
     &_clear {
-        height: 50px;
         color: color("gray-darkest");
-        padding: 0 70px;
         margin-top: 5px;
     }
 
-    &_menu {
-        height: 30px;
+    
+    &_filter {
+        width: 100%;
+        color: color("blue");
+        font-size: 14px;
+        font-weight: bold;
         background-color: color("white");
-        color: color("gray-darkest");
-        padding: 0 15px;
-        border-radius: 2px;
-        line-height: 0;
-        &:hover {
-            color: color("blue");
-        }
+        border-radius: 4px;
+        border: solid 1px #d7d7d7;
+        margin-bottom: 20px;
     }
 
     &_block {

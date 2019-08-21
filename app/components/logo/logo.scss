@@ -1,0 +1,15 @@
+.logo {
+    display: inline-flex;
+
+    &__img {
+        max-width: 100%;
+
+        @include media-breakpoint-down(md) {
+            width: 149px;
+        }
+
+        @include media-breakpoint-down(xs) {
+            width: 119px;
+        }
+    }
+}

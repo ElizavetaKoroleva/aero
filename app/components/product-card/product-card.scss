@@ -1,31 +1,83 @@
 .product-card {
-    width: 310px;
-    height: 386px;
+    position: relative;
     padding: 20px;
-    &:hover {
+    
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
         box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 2px;
+        transition: opacity $animation-time, visibility $animation-time;
+        pointer-events: none;
     }
 
-    &__container {
-        padding: 0;
-        margin: 0;
-
-        .product-card__link {
-            padding: 0;
-            margin: 0;
+    &:hover {
+        &::before {
+            opacity: 1;
+            visibility: visible;
         }
-    
-        .product-card__line {
-            width: 100%;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-    
-            .product-card__price {
-                font-weight: bold;
-                margin: 20px 0px 20px 0px;
+    }
+
+    &__link {
+        display: block;
+        color: color("gray-darkest");
+        text-decoration: none; 
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-height: 270px;
+        object-fit: contain;
+    }
+
+    &__name {
+        display: block;
+        padding-top: 10px;
+        line-height: 1.38;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        @include media-breakpoint-down(xs) {
+            font-size: 14px;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        @include media-breakpoint-down(xs) {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    }
+
+    &__price {
+        font-weight: bold;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+
+        .icon-btn {
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
