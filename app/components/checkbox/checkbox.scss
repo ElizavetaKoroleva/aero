@@ -2,7 +2,6 @@
     display: inline-flex;
     flex-wrap: wrap;
     cursor: pointer;
-    margin-top: 20px;
 
     &__label {
         position: relative;
@@ -66,8 +65,8 @@
 
                 &:hover {
                     &::before {
-                        border-color: color("blue-dark");
-                        background-color: color("blue-dark");
+                        border-color: color("blue-darker");
+                        background-color: color("blue-darker");
                     }
                 }
             }

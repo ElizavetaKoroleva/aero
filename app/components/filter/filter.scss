@@ -1,0 +1,42 @@
+.filter {
+
+    &_color {
+        .filter {
+            &__items {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            &__item {
+                display: inline-flex;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &.is-active + .filter__items {
+            display: block;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        display: none;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+}

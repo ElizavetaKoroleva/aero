@@ -1,1 +1,1 @@
-console.log('Hello, Webpack!');
+import * as filter from '../../components/filter/filter';

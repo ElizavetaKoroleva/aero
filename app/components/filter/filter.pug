@@ -1,0 +1,19 @@
+include ../toggle-btn/toggle-btn
+include ../checkbox/checkbox
+include ../page-information/page-information
+include ../color-checkbox/color-checkbox
+
+mixin filter(arr)
+    .filter(class=attributes.class ? 'filter_' + attributes.class + '' : '')
+        .filter__title(class='js-filter-trigger')= arr.title
+            .filter__toggle-btn
+                +slide-btn('arrow')
+        .filter__items
+            if attributes.class === 'color'
+                each item, index in arr.items
+                    .filter__item
+                        +color-checkbox(item.name + '-' + (index + 1), item.color)
+            else 
+                each item, index in arr.items
+                        .filter__item
+                            +checkbox(item.name + '-' + (index + 1), item.label)

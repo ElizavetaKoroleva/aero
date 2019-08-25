@@ -1,18 +1,13 @@
 include ../button/button
-include ../checkbox/checkbox
-include ../slide-btn/slide-btn
-include ../page-information/page-information
-include ../page-information/page-information
-include ../color-checkbox/color-checkbox
+include ../filter-list/filter-list
 
 mixin aside()
-    form(action="" class="filter")
-        .filter__color
-            .filter__title
-                div.page-information.page-information__filter= "Цвет"
-                +slide-btn('arrow')
-            -
-                var colors = [
+    -
+        var filters = [
+            {
+                title: 'Цвет',
+                type: 'color',
+                items: [
                     { name: 'filter-color', color: '#ffffff' },
                     { name: 'filter-color', color: '#000000' },
                     { name: 'filter-color', color: '#5a5a5a' },
@@ -23,35 +18,29 @@ mixin aside()
                     { name: 'filter-color', color: '#314976' },
                     { name: 'filter-color', color: '#3748a6' }
                 ]
-            each color in colors
-                +color-checkbox(color.name, color.color)
-        .filter__material
-            -
-                var materials = [
-                    {name: 'test', label: 'Вельвет'},
-                    {name: 'test', label: 'Микровелюр'},
-                    {name: 'test', label: 'Велюр'},
-                    {name: 'test', label: 'Жаккард'},
-                    {name: 'test', label: 'Замша'},
-                    {name: 'test', label: 'Рогожка'}
+            },
+            {
+                title: 'Материал',
+                items: [
+                    { name: 'filter-fabric', label: 'Вельвет' },
+                    { name: 'filter-fabric', label: 'Микровелюр' },
+                    { name: 'filter-fabric', label: 'Велюр' },
+                    { name: 'filter-fabric', label: 'Жаккард' },
+                    { name: 'filter-fabric', label: 'Замша' },
+                    { name: 'filter-fabric', label: 'Рогожка' }
                 ]
-            .filter__title
-                div.page-information.page-information__filter= "Материал"
-                +slide-btn('arrow')
-            each item in materials
-                +checkbox(item.name, item.label)
-        .filter__style
-            -
-                var angles = [
-                    {name: 'test', label: 'Левый'},
-                    {name: 'test', label: 'Правый'},
-                    {name: 'test', label: 'Универсальный'}
+            },
+            {
+                title: 'Угол',
+                items: [
+                    { name: 'filter-angle', label: 'Левый' },
+                    { name: 'filter-angle', label: 'Правый' },
+                    { name: 'filter-angle', label: 'Универсальный' }
                 ]
-            .filter__title
-                div.page-information.page-information__filter= "Угол"
-                +slide-btn('arrow')
-            each item in angles
-                +checkbox(item.name, item.label)
+            }
+        ]
+    form(action="" class="filter")
+        +filter-list(filters)
         input.button.button_primary(type="submit" value='Применить')
         input.button.button_clear(type="reset" value='Очистить фильтр')
     

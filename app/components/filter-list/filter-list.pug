@@ -1,0 +1,7 @@
+include ../filter/filter
+
+mixin filter-list(filters)
+    .filter-list
+        each filter in filters
+            .filter-list__item
+                +filter(filter)(class=filter.type ? filter.type : '')
