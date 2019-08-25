@@ -1,13 +1,16 @@
-.slide-btn {
+.toggle-btn {
     padding: 0;
     margin: 0;
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    transform: rotate(180deg);
+
+    &.is-active {
+        transform: rotate(180deg);
+    }
 
     &:hover {
-        .slide-btn__icon {
+        .toggle-btn__icon {
             > .icon {
                 fill: color('blue');
             }

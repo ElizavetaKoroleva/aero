@@ -7,7 +7,7 @@ mixin filter(arr)
     .filter(class=attributes.class ? 'filter_' + attributes.class + '' : '')
         .filter__title(class='js-filter-trigger')= arr.title
             .filter__toggle-btn
-                +slide-btn('arrow')
+                +toggle-btn('arrow')
         .filter__items
             if attributes.class === 'color'
                 each item, index in arr.items
