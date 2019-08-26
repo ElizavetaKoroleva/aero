@@ -28,8 +28,8 @@
         }
 
         &.is-active {
-            > .filter__toggle-btn {
-                > .toggle-btn {
+            .filter__toggle-btn {
+                .toggle-btn {
                     transform: rotate(180deg);
                 }
             }
