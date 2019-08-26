@@ -26,6 +26,14 @@
         &.is-active + .filter__items {
             display: block;
         }
+
+        &.is-active {
+            > .filter__toggle-btn {
+                > .toggle-btn {
+                    transform: rotate(180deg);
+                }
+            }
+        }
         
     }
 

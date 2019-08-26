@@ -1,5 +1,3 @@
-export * from './filter.js';
-
 const filterTriggers = document.querySelectorAll('.js-filter-trigger');
 
 const classes = {

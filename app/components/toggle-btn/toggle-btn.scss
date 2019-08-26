@@ -5,10 +5,6 @@
     background-color: transparent;
     cursor: pointer;
 
-    &.is-active {
-        transform: rotate(180deg);
-    }
-
     &:hover {
         .toggle-btn__icon {
             > .icon {
